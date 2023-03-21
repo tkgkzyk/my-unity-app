@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Unity WebGL Player | GoalGetter</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/goalgetter.json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate(
+        "unityContainer",
+        "Build/goalgetter.json",
+        { onProgress: UnityProgress }
+      );
     </script>
   </head>
-  <body>
+  <body
+    style="
+      background-image: url(./stadium-real.jpg);
+      background-size: cover;
+      width: 100%;
+      height: 100vh;
+    "
+  >
+    <div
+      class="layer"
+      style="
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        height: 840px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      "
+      ;
+    ></div>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 405px; height: 720px"></div>
+      <div id="unityContainer" style="width: 350px; height: 800px"></div>
       <div class="footer">
-        <div class="webgl-logo"></div>
+        <div class="webgl-logo" style="background-color: white"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">GoalGetter</div>
+        <div class="title" style="color: white">GoalGetter</div>
       </div>
+      <footer style="color: white">
+        <p>&copy; 2021 KazuyukiTakagi, All Rights Reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
